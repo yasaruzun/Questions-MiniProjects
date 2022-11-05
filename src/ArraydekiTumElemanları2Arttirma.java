@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class ArraydekiTumElemanları2Arttirma {
     public static void main(String[] args) {
 
-    //Soru 1- Verilen bir int array’in tum elemanlarini 2 artirip bize donduren bir method
+    //Verilen bir int array’in tum elemanlarini 2 artirip bize donduren bir method
     //olusturun. Eski array’i yeni haliyle kaydedin.
 
 

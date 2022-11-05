@@ -4,7 +4,7 @@ import java.util.List;
 public class ArraydekiPozitifTamsayilarinToplanmasi {
     public static void main(String[] args) {
 
-    //Soru 2- Verilen bir array’deki pozitif tamsayilari toplayip sonucu bize donduren bir
+    //Verilen bir array’deki pozitif tamsayilari toplayip sonucu bize donduren bir
     //method yaziniz.
 
         int[] arr = {2, 4, 6, 8, 10};
