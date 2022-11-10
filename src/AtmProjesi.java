@@ -20,6 +20,7 @@ Sifre değiştirme işleminde mevcut şifreyi teyit ettikten sonra, sifre deği�
     static double bakiye = 20000;
 
     public static void main(String[] args) {
+
         giris();
     }
 
