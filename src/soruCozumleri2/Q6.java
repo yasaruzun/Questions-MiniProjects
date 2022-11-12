@@ -2,6 +2,7 @@ package soruCozumleri2;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Q6 {
 
@@ -18,30 +19,45 @@ public class Q6 {
 
     public static void main(String[] args) {
 
-        List<String> isimler = new ArrayList<>();
+        Scanner scan= new Scanner(System.in);
 
-        isimler.add("ali");
-        isimler.add("veli");
-        isimler.add("ayse");
-        isimler.add("fatma");
-        isimler.add("omer");
+        List<String> isimler=new ArrayList<>();
 
-        String istenmeyenHarf = "f";
+        String isim;
 
-        List<String> yeniList = new ArrayList<>();
+        do{
+            System.out.println("lütfen bir isim ekleyiniz" +
+                    "\nsonlandirmak için 0'a basiniz.");
+            isim=scan.nextLine();
+            isimler.add(isim);
+            isimler.remove("0");
 
-        for (int i = 0; i < isimler.size(); i++) {
 
-            if (!isimler.get(i).contains(istenmeyenHarf)) {
-
-                yeniList.add(isimler.get(i));
-            }
+        }while(!isim.equals("0"));{
 
 
         }
 
-        isimler = yeniList;
+        System.out.println("lütfen istemediğiniz bir harf giriniz");
+        String istenmeyenHarf=scan.nextLine().toLowerCase();
+
+        List<String> yeniIsimler=new ArrayList<>();
+
+        for (int i = 0; i <isimler.size() ; i++) {
+
+            if(!isimler.get(i).toLowerCase().contains(istenmeyenHarf.toLowerCase())){
+
+                yeniIsimler.add(isimler.get(i));
+
+            }
+
+        }
+
+        isimler=yeniIsimler;
 
         System.out.println(isimler);
+
+
     }
-}
+
+    }
