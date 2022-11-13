@@ -1,30 +1,46 @@
 package soruCozumleri2;
 
+import java.util.Scanner;
+
 public class Q11 {
 
     public static void main(String[] args) {
-        //bir stringin basinda buyuk harf ve sonnda nokta olup olmadigini kont etmek icin kod yaz
 
-        String str="ahmet";
-
-        boolean basBuyukMu;
-        boolean sonNoktaMı;
+       /* Kullanicidan mesafeyi kilometre olarak alin ve cevirmek istedigi birimi sorun,
+        istedigi birim metre veya santimetreye  cevirip yazdirin,
+         yoksa "istediginiz birim sisteme kayitli degil" yazdirin. */
 
 
+        Scanner scan=new Scanner(System.in);
+        System.out.println("lütfen istediğiniz birimi yazınız");
+        String birim=scan.nextLine();
 
-        if(str.charAt(0)>='A' && str.charAt(0)<='Z') {
-            basBuyukMu=true;
-            System.out.println("bas harfi büyük");
+        System.out.println("çevirmek istediginiz kilometreyi giriniz");
+        int km=scan.nextInt();
 
-        }else{
-            System.out.println("bas harfi büyük degil");
+        int sonuc=1;
+
+
+
+
+        if(!(birim.substring(0,1).equalsIgnoreCase("m")||
+                (birim.substring(0,1).equalsIgnoreCase("s")))){
+
+
+            System.out.println("istediginiz birim sisteme kayitli degil");
+        }   if (birim.substring(0,1).equalsIgnoreCase("m")) {
+            sonuc=km*1000;
+        }   else if(birim.substring(0,1).equalsIgnoreCase("s")) {
+            sonuc=km*100000;
+
+
         }
+        System.out.println(sonuc);
 
-        if(str.charAt(str.length()-1)=='.'){
-            sonNoktaMı=true;
-            System.out.println("sonunda nokta vardır");
-        }else{
-            System.out.println("sonunda nokta yok");
-        }
+
+
+
+
+
     }
 }
