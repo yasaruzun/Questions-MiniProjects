@@ -1,12 +1,17 @@
 package miniATMProjesi;
 
-import static miniATMProjesi.AtmProjesi.scan;
+
+import static miniATMProjesi.Menu.scan;
 
 public class IbanKontrol {
 
+
     public static String ibanKontrol(String iban) {
+
         iban = iban.replaceAll("\\s", "");
-        if (iban.startsWith("TR") && iban.length() == 26) {
+
+        if (iban.contains("TR") && iban.length() == 26) {
+
 
         } else {
             System.out.println("GECERLI IBAN GIRINIZ: ");
@@ -18,6 +23,9 @@ public class IbanKontrol {
         return iban;
     }
 
-
-
 }
+
+
+
+
+

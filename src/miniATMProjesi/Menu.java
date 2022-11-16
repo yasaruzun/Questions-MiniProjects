@@ -2,6 +2,8 @@ package miniATMProjesi;
 
 import java.util.Scanner;
 
+
+
 public class Menu {
 
     static BakiyeSorgulama bsorgula = new BakiyeSorgulama();
@@ -9,12 +11,14 @@ public class Menu {
     static ParaCekme paraCekme = new ParaCekme();
 
     static IbanKontrol ibanK = new IbanKontrol();
+    static IbanKontrol miktar = new IbanKontrol();
 
     static ParaGonderme paGonder = new ParaGonderme();
+   static Scanner scan = new Scanner(System.in);
 
 
     public static void menu() {
-        Scanner scan = new Scanner(System.in);
+
         System.out.println("******JAVABANKA HOSGELDİNİZ*****\n" +
                 "YAPMAK ISTEDIGINIZ ISLEMİ SECINIZ\n" +
                 "1. BAKIYE SORGULAMA\n" +
@@ -23,31 +27,32 @@ public class Menu {
                 "4. PARA GONDERME\n" +
                 "5. SIFRE DEGISTIRME\n" +
                 "6. CIKIS");
+
         int secim = scan.nextInt();
+
         switch (secim) {
             case 1: {
-                bsorgula.bakiyeSorgula();
+                BakiyeSorgulama.bakiyeSorgula();
 
             }
             case 2: {
-                System.out.print("YATIRILACAK MIKTARI GIRINIZ:");
-                double miktar = scan.nextDouble();
-                pyatirma.paraYatirma(miktar);
+
+                ParaYatirma.paraYatirma();
 
             }
             case 3: {
-                System.out.println("CEKILECEK MIKTARI GIRINIZ:");
-                double miktar = scan.nextDouble();
-                paraCekme.paraCekme(miktar);
+
+                ParaCekme.paraCekme();
             }
             case 4: {
+                Scanner scan =new Scanner(System.in);
                 System.out.println("IBAN GIRINIZ: ");
                 String iban = scan.nextLine();
-                scan.nextLine();
                 System.out.println("GONDERILECEK MIKTARI GIRINIZ:");
                 double miktar = scan.nextDouble();
 
-                paGonder.paraGonderme(ibanK.ibanKontrol(iban), miktar);
+                ParaGonderme.paraGonderme(IbanKontrol.ibanKontrol(iban), miktar);
+
 
             }
             case 5: {

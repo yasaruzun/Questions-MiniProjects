@@ -1,6 +1,7 @@
 package miniATMProjesi;
 
-import static miniATMProjesi.AtmProjesi.scan;
+
+import static miniATMProjesi.Menu.scan;
 
 public class ParaGonderme {
 
@@ -11,7 +12,7 @@ public class ParaGonderme {
         if (miktar <= AUserATM.bakiye) {
             AUserATM.bakiye -= miktar;
             System.out.println(iban + " NOLU IBANA " + miktar + " GONDERILDI");
-            bakiSorgula.bakiyeSorgula();
+            BakiyeSorgulama.bakiyeSorgula();
         } else {
             System.out.println("GECERLI MIKTAR GIRINIZ:");
             paraGonderme(iban, scan.nextDouble());

@@ -1,6 +1,7 @@
 package miniATMProjesi;
 
-import static miniATMProjesi.AtmProjesi.scan;
+
+import static miniATMProjesi.Menu.scan;
 
 public class Giris {
 

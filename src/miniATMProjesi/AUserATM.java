@@ -16,7 +16,7 @@ Sifre değiştirme işleminde mevcut şifreyi teyit ettikten sonra, sifre deği�
    */
 
 
-    static String kartNo = "1234567890123456";
+    static String kartNo = "1";
     static String sifre="1234";
     static double bakiye=20000;
 
