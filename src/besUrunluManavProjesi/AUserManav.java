@@ -6,7 +6,7 @@ public class AUserManav {
 
      static int toplamKilo=0;
      static  int toplamFiyat;
-     static  int secim=1;
+     public static  int secim=1;
      static  int kilo=0;
      static int birFkg=10;
      static int ikiFkg=10;
